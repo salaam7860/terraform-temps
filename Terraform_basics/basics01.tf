@@ -8,13 +8,13 @@ terraform {
 }
 
 
-provider "azurerm" {
+provider "azurerm" { # <BLOCK TYPE> --- "<BLOCK LABEL>" "<BLOCK LABEL>"
   #resource_provider_registrations = "none" # This is only required when the User, Service Principal, or Identity running Terraform lacks the permissions to register Azure Resource Providers.
-  features {}
+  features {} 
 }
 
 
-resource "azurerm_resource_group" "tintintf" {
-  name     = "tintintf"
-  location = "eastus"
+resource "azurerm_resource_group" "tintintf" { # RESOURCE BLOCK 
+  name     = "tintintf" # ARGUMENT
+  location = "eastus"   # ARGUMENT
 }
